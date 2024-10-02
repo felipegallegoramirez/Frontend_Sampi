@@ -5,6 +5,8 @@ import { LoginComponent } from './pages/general/login/login.component';
 import { Error404Component } from './pages/general/error404/error404.component';
 import { ComingSoonComponent } from './pages/general/coming-soon/coming-soon.component';
 import { ForgotPasswordComponent } from './pages/general/forgot-password/forgot-password.component';
+import { ToolkitComponent } from './pages/general/toolkit/toolkit.component';
+import { RiskToolkitComponent } from './pages/risk/risk-toolkit/risk-toolkit.component';
 
 const routes: Routes = [
   { path: 'Landing', component: LandingComponent },
@@ -12,6 +14,8 @@ const routes: Routes = [
   { path: '', component: Error404Component },
   { path: 'Proximamente', component: ComingSoonComponent },
   { path: 'Recuperar', component: ForgotPasswordComponent },
+  { path: 'Central', component: ToolkitComponent },
+  { path: 'Central-Riesgos', component: RiskToolkitComponent },
 ];
 
 @NgModule({
