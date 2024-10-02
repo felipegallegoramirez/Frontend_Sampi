@@ -1,0 +1,28 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { LandingComponent } from './pages/general/landing/landing.component';
+import { LoginComponent } from './pages/general/login/login.component';
+import { Error404Component } from './pages/general/error404/error404.component';
+import { ComingSoonComponent } from './pages/general/coming-soon/coming-soon.component';
+import { ForgotPasswordComponent } from './pages/general/forgot-password/forgot-password.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    LandingComponent,
+    LoginComponent,
+    Error404Component,
+    ComingSoonComponent,
+    ForgotPasswordComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
