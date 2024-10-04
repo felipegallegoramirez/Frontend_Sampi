@@ -7,6 +7,7 @@ import { ComingSoonComponent } from './pages/general/coming-soon/coming-soon.com
 import { ForgotPasswordComponent } from './pages/general/forgot-password/forgot-password.component';
 import { ToolkitComponent } from './pages/general/toolkit/toolkit.component';
 import { RiskToolkitComponent } from './pages/risk/risk-toolkit/risk-toolkit.component';
+import { RiskComponent } from './pages/risk/risk/risk.component';
 
 const routes: Routes = [
   { path: 'Landing', component: LandingComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'Recuperar', component: ForgotPasswordComponent },
   { path: 'Central', component: ToolkitComponent },
   { path: 'Central-Riesgos', component: RiskToolkitComponent },
+  { path: 'Riesgos', component: RiskComponent },
 ];
 
 @NgModule({

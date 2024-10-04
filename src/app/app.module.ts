@@ -11,6 +11,7 @@ import { ComingSoonComponent } from './pages/general/coming-soon/coming-soon.com
 import { ForgotPasswordComponent } from './pages/general/forgot-password/forgot-password.component';
 import { ToolkitComponent } from './pages/general/toolkit/toolkit.component';
 import { RiskToolkitComponent } from './pages/risk/risk-toolkit/risk-toolkit.component';
+import { RiskComponent } from './pages/risk/risk/risk.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { RiskToolkitComponent } from './pages/risk/risk-toolkit/risk-toolkit.com
     ComingSoonComponent,
     ForgotPasswordComponent,
     ToolkitComponent,
-    RiskToolkitComponent
+    RiskToolkitComponent,
+    RiskComponent
   ],
   imports: [
     BrowserModule,
