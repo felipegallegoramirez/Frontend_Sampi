@@ -1,1 +1,137 @@
-<p>risk works!</p>
+<div class="dashboard-container">
+    <!-- Panel de búsqueda y filtros -->
+    <div class="search-panel">
+        <div class="search-panel-header">
+            <h2 class="search-panel-title">Gestión de Riesgos</h2>
+            <button>Agregar</button>
+        </div>
+        
+        <div class="search-filters">
+            <!-- Campo de búsqueda -->
+            <div class="search-container">
+                <input type="text">
+            </div>
+
+            <!-- Selector de categoría -->
+            <div class="filter-group">
+                <select class="filter-select">
+                    <option value="">Rol</option>
+                    <option value="admin">Administrador</option>
+                    <option value="editor">Editor</option>
+                    <option value="user">Usuario</option>
+                </select>
+            </div>
+
+            <!-- Selector de estado -->
+            <div class="filter-group">
+                <select class="filter-select">
+                    <option value="">Estado</option>
+                    <option value="active">Activo</option>
+                    <option value="inactive">Inactivo</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+
+<div class="table-container">
+    <table class="modern-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Rol</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="id-cell">#001</td>
+                <td>Ana García</td>
+                <td><a href="mailto:ana.garcia@email.com" class="email">{{'ana.garcia@email.com'}}</a></td>
+                <td><span class="role-badge">Administrador</span></td>
+                <td><span class="status active">Activo</span></td>
+                <td>
+                    <div class="action-buttons">
+                        <button class="btn btn-edit" title="Editar">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                            </svg>
+                        </button>
+                        <button class="btn btn-delete" title="Eliminar">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                            </svg>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="id-cell">#002</td>
+                <td>Carlos López</td>
+                <td><a href="mailto:carlos.lopez@email.com" class="email">{{'ana.garcia@email.com'}}</a></td>
+                <td><span class="role-badge">Editor</span></td>
+                <td><span class="status active">Activo</span></td>
+                <td>
+                    <div class="action-buttons">
+                        <button class="btn btn-edit" title="Editar">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                            </svg>
+                        </button>
+                        <button class="btn btn-delete" title="Eliminar">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                            </svg>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="id-cell">#003</td>
+                <td>María Rodríguez</td>
+                <td><a href="mailto:maria.rodriguez@email.com" class="email">{{'ana.garcia@email.com'}}</a></td>
+                <td><span class="role-badge">Usuario</span></td>
+                <td><span class="status inactive">Inactivo</span></td>
+                <td>
+                    <div class="action-buttons">
+                        <button class="btn btn-edit" title="Editar">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                            </svg>
+                        </button>
+                        <button class="btn btn-delete" title="Eliminar">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                            </svg>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="id-cell">#004</td>
+                <td>Juan Pérez</td>
+                <td><a href="mailto:juan.perez@email.com" class="email">{{'ana.garcia@email.com'}}</a></td>
+                <td><span class="role-badge">Editor</span></td>
+                <td><span class="status active">Activo</span></td>
+                <td>
+                    <div class="action-buttons">
+                        <button class="btn btn-edit" title="Editar">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                            </svg>
+                        </button>
+                        <button class="btn btn-delete" title="Eliminar">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                            </svg>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,41 @@
+.title{
+    display: flex;
+    align-items: center;
+
+    height: calc(100vh - 200px);
+    justify-content: center;
+}
+.title * {
+    margin: 0px;
+}
+
+.title h1{
+    font-size: 100px;
+    color: var(--c1);
+}
+.title h2{
+    font-size: 30px;
+    color: var(--c1);
+    margin-bottom: 20px;
+}
+
+.title p{
+    font-size: 20px;
+    color: var(--g);
+
+}
+
+.title img{
+    width: 30%;
+    z-index: -20;
+    margin: 40px;
+}
+.title>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+
