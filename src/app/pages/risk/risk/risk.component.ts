@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './risk.component.css'
 })
 export class RiskComponent {
+  form:boolean=true;
+  hidden(){
+    this.form = !this.form
+  }
 
 }

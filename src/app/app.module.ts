@@ -12,6 +12,9 @@ import { ForgotPasswordComponent } from './pages/general/forgot-password/forgot-
 import { ToolkitComponent } from './pages/general/toolkit/toolkit.component';
 import { RiskToolkitComponent } from './pages/risk/risk-toolkit/risk-toolkit.component';
 import { RiskComponent } from './pages/risk/risk/risk.component';
+import { RiskFormComponent } from './components/risk/risk-form/risk-form.component';
+import { RiskFactorsFormComponent } from './components/risk/risk-factors-form/risk-factors-form.component';
+import { RiskGeneralFactorsFormComponent } from './components/risk/risk-general-factors-form/risk-general-factors-form.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { RiskComponent } from './pages/risk/risk/risk.component';
     ForgotPasswordComponent,
     ToolkitComponent,
     RiskToolkitComponent,
-    RiskComponent
+    RiskComponent,
+    RiskFormComponent,
+    RiskFactorsFormComponent,
+    RiskGeneralFactorsFormComponent
   ],
   imports: [
     BrowserModule,

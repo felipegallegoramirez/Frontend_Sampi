@@ -1,0 +1,85 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <h1>Riesgos</h1>
+  
+  <div>
+    <label  for="categoria">Categoría:</label>
+    <input id="categoria" type="text" formControlName="categoria" maxlength="25" (focus)="onFocus()" (blur)="onBlur()" (keydown)="filterSuggestions()">
+    <div *ngIf="form.get('categoria')?.errors && form.get('categoria')?.touched">
+      <small *ngIf="form.get('categoria')?.errors?.['required']">El categoria es requerido</small>
+      <small *ngIf="form.get('categoria')?.errors?.['maxlength']">El categoria no debe exceder 25 caracteres</small>
+      <small *ngIf="form.get('categoria')?.errors?.['contain']">categoria no encontrado</small>
+    </div>
+    <ul *ngIf="showSuggestions" class="suggestions-list">        
+      <li class="list" *ngFor="let suggestion of filteredSuggestions" (click)="selectSuggestion(suggestion)">
+        <p>{{ suggestion }}</p>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+          </svg>
+          
+        </div>
+
+
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <label  for="subcategoria">Subcategoria:</label>
+    <input id="subcategoria" type="text" formControlName="subcategoria" maxlength="25" (focus)="onFocus2()" (blur)="onBlur2()" (keydown)="filterSuggestions2()">
+    <div *ngIf="form.get('subcategoria')?.errors && form.get('subcategoria')?.touched">
+      <small *ngIf="form.get('subcategoria')?.errors?.['required']">El subcategoria es requerido</small>
+      <small *ngIf="form.get('subcategoria')?.errors?.['maxlength']">El subcategoria no debe exceder 25 caracteres</small>
+      <small *ngIf="form.get('subcategoria')?.errors?.['contain']">subcategoria no encontrado</small>
+    </div>
+    <ul *ngIf="showSuggestions2" class="suggestions-list">        
+      <li  *ngFor="let suggestion2 of filteredSuggestions2" (click)="selectSuggestion2(suggestion2)">
+      {{ suggestion2 }}
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <label  for="name">Nombre:</label>
+    <input id="name" type="text" formControlName="name" maxlength="255">
+    <div *ngIf="form.get('name')?.errors && form.get('name')?.touched">
+      <small *ngIf="form.get('name')?.errors?.['required']">La Nombre es requerida</small>
+      <small *ngIf="form.get('name')?.errors?.['maxlength']">La Nombre no debe exceder 255 caracteres</small>
+    </div>
+  </div>
+
+  <div>
+    <label  for="description">Descripcion:</label>
+    <textarea id="description" type="text" formControlName="description" maxlength="255"></textarea>
+    <div *ngIf="form.get('description')?.errors && form.get('description')?.touched">
+      <small *ngIf="form.get('description')?.errors?.['required']">La condición de contexto es requerida</small>
+      <small *ngIf="form.get('description')?.errors?.['maxlength']">La condición de contexto no debe exceder 255 caracteres</small>
+    </div>
+  </div>
+
+  <div>
+    <label class="checkbox-container">
+      <input formControlName="ethic" type="checkbox" class="custom-checkbox">
+      <span class="checkmark"></span>
+      <span class="checkbox-label">Etico</span>
+    </label>
+    <div *ngIf="form.get('finalidad')?.errors && form.get('finalidad')?.touched">
+      <small *ngIf="form.get('finalidad')?.errors?.['required']">La finalidad es requerida</small>
+      <small *ngIf="form.get('finalidad')?.errors?.['maxlength']">La finalidad no debe exceder 255 caracteres</small>
+    </div>
+  </div>
+
+  <div>
+    <label class="checkbox-container">
+      <input formControlName="other" type="checkbox" class="custom-checkbox">
+      <span class="checkmark"></span>
+      <span class="checkbox-label">Otro</span>
+    </label>
+  </div>
+
+
+  <button type="submit" [disabled]="!form.valid">Enviar</button>
+</form>

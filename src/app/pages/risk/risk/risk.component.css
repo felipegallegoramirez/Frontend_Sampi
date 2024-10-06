@@ -328,7 +328,6 @@ button:disabled {
 
 .search-input:focus {
     outline: none;
-    border-color: #6366f1;
     background: white;
     box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
 }
@@ -359,7 +358,6 @@ button:disabled {
 
 .filter-select:focus {
     outline: none;
-    border-color: #6366f1;
     background: white;
     box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
 }
@@ -395,4 +393,39 @@ button:disabled {
 .search-panel-header>button{
     margin: 0px;
     font-size: 18px;
+}
+
+
+/*
+ ! Inicio formulario
+*/
+
+.form{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.form>.background{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--b);
+    opacity: 80%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.form>.form-container{
+    padding: 20px;
+    border-radius: 5px;
+    background-color: var(--w);
+    margin: 80px calc(50vw - 400px);
+    width: 800px;
+    position: relative;
+    z-index: 10;
 }

@@ -12,8 +12,6 @@ export class AppComponent {
   Hidden(){
     let nav = document.getElementById('Central')
     nav?.classList.toggle('Hidden')
-
-    
   }
 
 

@@ -3,7 +3,7 @@
     <div class="search-panel">
         <div class="search-panel-header">
             <h2 class="search-panel-title">Gestión de Riesgos</h2>
-            <button>Agregar</button>
+            <button (click)="hidden()">Agregar</button>
         </div>
         
         <div class="search-filters">
@@ -136,3 +136,10 @@
     </table>
 </div>
 
+
+<div *ngIf="form" id="form" class="form">
+    <div class="background" (click)="hidden()"></div>
+    <div class="form-container">
+        <app-risk-form />
+    </div>
+</div>
