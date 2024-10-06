@@ -1,0 +1,305 @@
+
+
+<!--
+<button (click)="agregar()">Agregar</button>
+<div
+  cdkDropList
+  class="drag-drop-list"
+  (cdkDropListDropped)="drop($event)"
+>
+  <div *ngFor="let item of items; let i = index" cdkDrag>
+    <div class="drag-handle" cdkDragHandle>✖</div>
+
+
+    <input [value]="item" class="draggable-input"/>
+    <button (click)="eliminar(item)">eliminar</button>
+
+
+
+  </div>
+</div>
+-->
+
+
+
+<div class="table-container">
+    <table class="modern-table">
+        <thead>
+            <tr>
+                <th rowspan="3">Mover</th>
+                <th rowspan="3">Acciones</th>
+                <th rowspan="3">ID</th>
+                <th rowspan="3">Factores de riesgo</th>
+                <th rowspan="3">Actividad/Proceso</th>
+                <th rowspan="3">Riesgo Potencial/Actividad de omisión o acción</th>
+                <th colspan="6">Riesgo Reputacional</th>
+                <th colspan="6">Riesgo Patrimonial</th>
+                <th colspan="6">Riesgo Legal</th>
+            </tr>
+            <tr>
+                <th colspan="2">Experto 1</th>
+                <th colspan="2">Experto 2</th>
+                <th colspan="2">Experto 3</th>
+
+                <th colspan="2">Experto 1</th>
+                <th colspan="2">Experto 2</th>
+                <th colspan="2">Experto 3</th>
+
+                <th colspan="2">Experto 1</th>
+                <th colspan="2">Experto 2</th>
+                <th colspan="2">Experto 3</th>
+            </tr>
+            <tr>
+                <th>Daño</th>
+                <th>Probabilidad</th>
+                <th>Daño</th>
+                <th>Probabilidad</th>
+                <th>Daño</th>
+                <th>Probabilidad</th>
+
+                <th>Daño</th>
+                <th>Probabilidad</th>
+                <th>Daño</th>
+                <th>Probabilidad</th>
+                <th>Daño</th>
+                <th>Probabilidad</th>
+
+                <th>Daño</th>
+                <th>Probabilidad</th>
+                <th>Daño</th>
+                <th>Probabilidad</th>
+                <th>Daño</th>
+                <th>Probabilidad</th>
+            </tr>
+        </thead>
+        <tbody cdkDropList (cdkDropListDropped)="drop($event)">
+            <ng-container *ngFor="let item of items; let i = index">
+                <tr cdkDrag>
+                    <td cdkDragHandle>
+                        <svg style="width: 30px;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                          </svg>                          
+                    </td>
+                    <td>
+                        <div class="action-buttons">
+                            <button (click)="agregar(item)" class="btn btn-edit" title="Editar">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                  </svg>                                                              
+                            </button>
+                            <button (click)="eliminar(item)" class="btn btn-delete" title="Eliminar">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </td>
+                    <td class="id-cell">{{item}}</td>
+                    <td>Prueba</td>
+                    <td><input style="min-width: 300px;" type="text"></td>
+                    <td style="min-width: 400px; cursor: pointer;">
+                        <p>LocalHost</p>
+                    </td>
+                    <td>                
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>                
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>                
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>                
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>                
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>                
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>                
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>                
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>                
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>                
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>                
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>                
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>                
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>                
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>                
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>                
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>                
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>                
+                        <div class="filter-group">
+                            <select class="filter-select">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

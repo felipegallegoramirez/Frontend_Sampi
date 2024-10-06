@@ -1,1 +1,14 @@
-<p>risk-factors-form works!</p>
+<button (click)="agregar()">Agregar</button>
+
+
+<div
+  cdkDropList
+  class="drag-drop-list"
+  (cdkDropListDropped)="drop($event)"
+>
+  <div *ngFor="let item of items; let i = index" cdkDrag>
+    <div class="drag-handle" cdkDragHandle>✖</div>
+    <input [value]="item" class="draggable-input"/>
+    <button (click)="eliminar(item)">eliminar</button>
+  </div>
+</div>
