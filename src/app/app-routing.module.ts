@@ -8,6 +8,11 @@ import { ForgotPasswordComponent } from './pages/general/forgot-password/forgot-
 import { ToolkitComponent } from './pages/general/toolkit/toolkit.component';
 import { RiskToolkitComponent } from './pages/risk/risk-toolkit/risk-toolkit.component';
 import { RiskComponent } from './pages/risk/risk/risk.component';
+import { RiskFactorsFormComponent } from './components/risk/risk-factors-form/risk-factors-form.component';
+import { ControlsComponent } from './pages/risk/controls/controls.component';
+import { RiskMatrixComponent } from './pages/risk/risk-matrix/risk-matrix.component';
+import { CompanyToolkitComponent } from './pages/company/company-toolkit/company-toolkit.component';
+import { CompanyComponent } from './pages/company/company/company.component';
 
 const routes: Routes = [
   { path: 'Landing', component: LandingComponent },
@@ -18,6 +23,11 @@ const routes: Routes = [
   { path: 'Central', component: ToolkitComponent },
   { path: 'Central-Riesgos', component: RiskToolkitComponent },
   { path: 'Riesgos', component: RiskComponent },
+  { path: 'test', component: RiskFactorsFormComponent },
+  { path: 'Controles', component: ControlsComponent },
+  { path: 'Matriz-Riesgos', component: RiskMatrixComponent },
+  { path: 'Central-Empresas', component: CompanyToolkitComponent },
+  { path: 'Empresas', component: CompanyComponent },
 ];
 
 @NgModule({

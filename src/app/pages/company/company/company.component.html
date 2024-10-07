@@ -2,7 +2,7 @@
     <!-- Panel de búsqueda y filtros -->
     <div class="search-panel">
         <div class="search-panel-header">
-            <h2 class="search-panel-title">Gestión de Riesgos</h2>
+            <h2 class="search-panel-title">Gestión de Empresas</h2>
             <button (click)="hidden()">Agregar</button>
         </div>
         
@@ -12,28 +12,6 @@
                 <input type="text">
             </div>
 
-            <!-- Selector de categoría -->
-            <div class="filter-group">
-                <select class="filter-select">
-                    <option value="">Geografico</option>
-                    <option value="">Contra Partes</option>
-                    <option value="">Producto o Servicio</option>
-                    <option value="">Transacciones</option>
-                    <option value="">Operacional</option>
-                    <option value="">Canal de distribucion</option>
-                    <option value="">Normativo o Regulatorio</option>
-                    <option value="">Tecnologico</option>
-                </select>
-            </div>
-
-            <!-- Selector de estado -->
-            <div class="filter-group">
-                <select class="filter-select">
-                    <option value="">General</option>
-                </select>
-            </div>
-        </div>
-
     </div>
 
 
@@ -41,19 +19,15 @@
     <table class="modern-table">
         <thead>
             <tr>
-                <th>ID</th>
+                <th>NIT</th>
                 <th>Nombre</th>
-                <th>Descripcion</th>
-                <th>Etiqueta</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td class="id-cell">#001</td>
-                <td>Prueba</td>
-                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione inventore eos neque delectus, tempora laudantium corporis quam atque, aperiam qui perspiciatis iure quis modi! Nobis voluptatibus dicta earum culpa aut?</td>
-                <td><span class="status active">Etico</span></td>
+                <td class="id-cell">#001001001</td>
+                <td>Sampi</td>
                 <td>
                     <div class="action-buttons">
                         <button class="btn btn-edit" title="Editar">
@@ -77,6 +51,6 @@
 <div *ngIf="form" id="form" class="form">
     <div class="background" (click)="hidden()"></div>
     <div class="form-container">
-        <app-risk-form />
+        <app-company-form />
     </div>
 </div>

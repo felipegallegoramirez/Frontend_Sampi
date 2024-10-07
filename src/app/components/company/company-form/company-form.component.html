@@ -1,0 +1,41 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <h1>Controles</h1>
+
+    <div>
+      <label  for="nit">nit:</label>
+      <input id="nit" type="text" formControlName="nit" maxlength="255" />
+      <div *ngIf="form.get('nit')?.errors && form.get('nit')?.touched">
+        <small *ngIf="form.get('nit')?.errors?.['required']">La nit es requerida</small>
+        <small *ngIf="form.get('nit')?.errors?.['maxlength']">La nit no debe exceder 255 caracteres</small>
+      </div>
+    </div>
+  
+    <div>
+      <label  for="name">Nombre:</label>
+      <input id="name" type="text" formControlName="name" maxlength="255" />
+      <div *ngIf="form.get('name')?.errors && form.get('name')?.touched">
+        <small *ngIf="form.get('name')?.errors?.['required']">La Nombre es requerida</small>
+        <small *ngIf="form.get('name')?.errors?.['maxlength']">La Nombre no debe exceder 255 caracteres</small>
+      </div>
+    </div>
+
+    <div>
+      <label  for="email">Correo:</label>
+      <input id="email" type="text" formControlName="email" maxlength="255" />
+      <div *ngIf="form.get('email')?.errors && form.get('email')?.touched">
+        <small *ngIf="form.get('email')?.errors?.['required']">La Correo es requerida</small>
+        <small *ngIf="form.get('email')?.errors?.['maxlength']">La Correo no debe exceder 255 caracteres</small>
+      </div>
+    </div>
+  
+    <div>
+      <label  for="description">Descripcion:</label>
+      <textarea id="description" type="text" formControlName="description" maxlength="255"></textarea>
+      <div *ngIf="form.get('description')?.errors && form.get('description')?.touched">
+        <small *ngIf="form.get('description')?.errors?.['required']">La condición de contexto es requerida</small>
+        <small *ngIf="form.get('description')?.errors?.['maxlength']">La condición de contexto no debe exceder 255 caracteres</small>
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="!form.valid">Enviar</button>
+  </form>
